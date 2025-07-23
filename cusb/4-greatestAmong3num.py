@@ -1,0 +1,18 @@
+A = int(input("enter A : "))
+B = int(input("enter B : "))
+C = int(input("enter C : "))
+
+
+
+if A > B and A > C :
+    print("A is greatest")
+
+elif B > A and B > C :
+    print("B is greatest")
+
+elif B == A and C == A:
+    print("A , B and C are same")
+
+else:
+#elif C > A and C > B:
+    print("C is greatest")
