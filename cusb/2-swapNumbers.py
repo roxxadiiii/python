@@ -1,0 +1,9 @@
+A = int(input("enter A : "))
+B = int(input("enter B : "))
+
+temp = A
+A = B 
+B = temp
+
+print("the new A is : " , A)
+print("the new B is : " , B)
