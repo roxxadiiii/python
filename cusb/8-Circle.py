@@ -1,0 +1,21 @@
+print(
+'''
+ ██████╗██╗██████╗  ██████╗██╗     ███████╗
+██╔════╝██║██╔══██╗██╔════╝██║     ██╔════╝
+██║     ██║██████╔╝██║     ██║     █████╗  
+██║     ██║██╔══██╗██║     ██║     ██╔══╝  
+╚██████╗██║██║  ██║╚██████╗███████╗███████╗
+ ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝╚══════╝╚══════╝
+                                           
+
+'''
+        )
+
+r = float(input("enter the radius for the circle (in m): "))
+
+area = 3.147 * r * r 
+
+circumference = 2 * 3.147 * r 
+
+print("area of the circle is : " , area , "m sq.")
+print("circumference of the circle is : " , circumference , "m")

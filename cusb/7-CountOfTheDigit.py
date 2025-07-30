@@ -1,0 +1,6 @@
+test = "jhwvekjbcehkvw"
+s = input("Enter the desired string for the length : ")
+
+
+
+print("length of the desired string is : " , len(s))
