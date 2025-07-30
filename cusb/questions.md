@@ -8,7 +8,7 @@
 - take three numbers and print the greatest among all three.
 - reverse a string without a loop.
 - count the number of digits . 
-- find the GCD of two numbers .
+- find the Greatest Common Divisor /HCF of two numbers .
 - find the LCM of the two number .
 - factorial using recursion .
 - area and circumference of a circle .

@@ -1,0 +1,12 @@
+string = input("Enter a desired 5 character String : ")
+
+at5 = string[0]
+at4 = string[1]
+at3 = string[2]
+at2 = string[3]
+at1 = string[4]
+
+
+reversed = at1 + at2 + at3 + at4 + at5
+
+print(reversed)
