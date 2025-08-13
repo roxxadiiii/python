@@ -1,0 +1,18 @@
+art = (
+'''
+
+┌┐┌┬ ┬┌┬┐┌┐ ┌─┐┬─┐   
+││││ ││││├┴┐├┤ ├┬┘   
+┘└┘└─┘┴ ┴└─┘└─┘┴└─   
+┌┬┐┬ ┬┬ ┌┬┐┬┌─┐┬  ┌─┐
+││││ ││  │ │├─┘│  ├┤ 
+┴ ┴└─┘┴─┘┴ ┴┴  ┴─┘└─┘
+'''
+)
+
+print(art)
+num = input("Enter the desired number to print the table : ")
+
+for i in range(1,11):
+    multiple = int(num) * i
+    print(multiple)
