@@ -1,0 +1,24 @@
+art = (
+'''
+┬┌─┐┌─┐┌─┐┬  ┬┌┐┌┌┬┐┬─┐┌─┐┌┬┐┌─┐ ┌─┐┬ ┬
+│└─┐├─┘├─┤│  ││││ ││├┬┘│ ││││├┤  ├─┘└┬┘
+┴└─┘┴  ┴ ┴┴─┘┴┘└┘─┴┘┴└─└─┘┴ ┴└─┘o┴   ┴
+'''
+)
+
+print(art)
+
+# code start
+
+nu = input("Enter the desired string to check whether it is palindrome or not : ")
+
+lenS = len(nu) - 1
+
+for i in range(lenS):
+    if nu[i] == nu[lenS - i]:
+        print("chechking")
+    else :
+        print("not palindrome")
+        exit()
+print("is palindrome")
+print(len(nu))
