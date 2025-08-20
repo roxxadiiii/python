@@ -23,3 +23,5 @@
 - write a python program to check whether a given (input from user) string or number is a palindrome .
 - write a python function that counts the numbers of vowels in a given string .
 - write a python programto reverse a given string without using slicing .
+[  ] Write a python program to remove all duplicates from a given list .
+[  ] Write a python function find_maz_min that returns maximum and minimum values in a list .
