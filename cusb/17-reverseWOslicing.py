@@ -17,13 +17,15 @@ o┴   ┴
 
 )
 
+
+print(art)
 s = input("Enter your desired string : ")
-lenS = len(s)
-sTemp = s 
 
-for i in range(lenS):
-    s[i] = sTemp[-i]
+rs = " "
 
+for i in s:
+    rs = i + rs
 
-print(s)
-print(s[-1])
+# hence reversed string
+
+print("reversed string is : " , rs)
