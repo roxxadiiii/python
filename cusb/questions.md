@@ -24,7 +24,11 @@
 - write a python function that counts the numbers of vowels in a given string .
 - write a python program to reverse a given string without using slicing .
 [ x ] Write a python program to remove all duplicates from a given list .
-[  ] Write a python function find_maz_min that returns maximum and minimum values in a list .
+[  ] Write a python function find_max_min that returns maximum and minimum values in a list .
 [  ] Write a python program to count the frequency of each word in a given text .
 [  ] Write a python function that takes a dictionary as input and returns the key with the highest value .
 [  ] Write a Python function that accepts an arbitrary number of keyword arguments and prints the result as a dictionary .
+[ x ] Write a Python function is prime that checks if a number is a prime number .
+[  ] Write a python function that accepts an arbitrary number of keyboard arguments and prints the result as a dictionary .
+[  ] Write a python program that takes a list of integers and returns a new list that contains only the even numbers using list comprehensions .
+[  ] Write a pyhton list comprehension to generate a list of squares of numbers between 1 and 10 .

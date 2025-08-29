@@ -1,0 +1,31 @@
+art = (
+'''
+┌─┐┬┌┐┌┌┬┐
+├┤ ││││ ││
+└  ┴┘└┘─┴┘
+┌┬┐┬┌┐┌   
+│││││││   
+┴ ┴┴┘└┘   
+┌┬┐┌─┐─┐ ┬
+│││├─┤┌┴┬┘
+┴ ┴┴ ┴┴ └─
+'''
+)
+
+print(art)
+
+def find_min_max(my_list):
+    # print(my_list)                use for debugg process
+    max_val = my_list[0]
+    min_val = my_list[0]
+    for num in my_list:
+        if num > max_val:
+            max_val = num
+        elif num < min_val:
+            min_val = num
+    
+    return (max_val , min_val)
+
+myli = input("Enter your desired list and seperate it with space : ").split()
+
+print("Max , Min : " ,find_min_max(myli))

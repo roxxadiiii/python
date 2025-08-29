@@ -1,0 +1,25 @@
+import math
+art =(
+'''
+┬┌─┐┌─┐┬─┐┬┌┬┐┌─┐
+│└─┐├─┘├┬┘││││├┤ 
+┴└─┘┴  ┴└─┴┴ ┴└─┘
+
+'''
+)
+
+print(art)
+
+def isPrime(num):
+    if num < 2:                     # handling negative numbers
+        return "not prime"
+    for i in range(2, int(math.sqrt(num)) + 1):             # range start from 2 to sqrt + 1
+        if num % i == 0:
+            return "not prime"
+    return "prime"
+
+print("12213 is " ,isPrime(12213))
+print("12213112 is " ,isPrime(12213112))
+print("112131233 is " ,isPrime(112131233))
+print("7 is " ,isPrime(7))
+print("213 is " ,isPrime(213))
