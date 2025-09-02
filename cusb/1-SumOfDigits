@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 
 num = input("Enter a desired 4 digits number : ")
 

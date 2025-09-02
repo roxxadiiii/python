@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 test = "jhwvekjbcehkvw"
 s = input("Enter the desired string for the length : ")
 
