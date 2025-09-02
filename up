@@ -1,0 +1,210 @@
+#!/bin/bash
+# =============================================
+# Git Auto Commit & Push Script (Enhanced with Gum)
+# Author: Aditya Kumar (gh: https://github.com/roxxamay)
+# Enhanced with Gum UI components
+# =============================================
+# ⚠️ WARNING
+# Executing personal scripts can expose your system to risks.
+# Review carefully before running. Proceed at your own risk.
+
+# Check if gum is installed
+if ! command -v gum &> /dev/null; then
+    echo "❌ Gum is not installed. Please install it first:"
+    echo "   • macOS: brew install gum"
+    echo "   • Linux: Check https://github.com/charmbracelet/gum#installation"
+    exit 1
+fi
+
+# Check if we're in a git repository
+if ! git rev-parse --is-inside-work-tree &> /dev/null; then
+    gum style --foreground 196 --bold "❌ Not in a Git repository!"
+    exit 1
+fi
+
+# --- INTRO ---
+gum style \
+    --foreground 212 \
+    --border-foreground 212 \
+    --border double \
+    --align center \
+    --width 60 \
+    --margin "1 2" \
+    --padding "1 2" \
+    "Git Auto Commit & Push" \
+    "Enhanced with Gum UI"
+
+# Show current repository status
+gum style --foreground 33 "📁 Repository: $(basename "$(git rev-parse --show-toplevel)")"
+gum style --foreground 33 "🌿 Current branch: $(git symbolic-ref --short HEAD 2>/dev/null || echo 'detached HEAD')"
+
+# Check for changes
+if git diff-index --quiet HEAD -- 2>/dev/null; then
+    gum style --foreground 46 "✅ No changes to commit"
+    if ! gum confirm "Do you want to push anyway?"; then
+        gum style --foreground 226 "👋 Exiting..."
+        exit 0
+    fi
+else
+    # Show file changes preview
+    gum style --foreground 226 --bold "📊 Changes to be committed:"
+    git status --porcelain | gum style --foreground 33 --margin "0 2"
+    
+    if ! gum confirm "Stage and commit these changes?"; then
+        gum style --foreground 226 "👋 Cancelled by user"
+        exit 0
+    fi
+fi
+
+# --- STAGE CHANGES ---
+gum spin --spinner dot --title "Adding changes..." -- git add --all .
+gum style --foreground 46 "✅ All changes staged"
+
+# --- COMMIT MESSAGE ---
+gum style --foreground 39 --bold "💭 Choose commit message option:"
+
+# Commit message options
+commit_option=$(gum choose --height 4 \
+    "📝 Enter custom message" \
+    "🤖 Auto-generate message" \
+    "⚡ Quick commit types" \
+    "📋 Recent commit messages")
+
+case $commit_option in
+    "📝 Enter custom message")
+        commit_msg=$(gum input --placeholder "Enter your commit message...")
+        if [ -z "$commit_msg" ]; then
+            gum style --foreground 196 "❌ Empty commit message"
+            exit 1
+        fi
+        ;;
+    "🤖 Auto-generate message")
+        commit_msg="Auto commit on $(date '+%Y-%m-%d %H:%M:%S')"
+        gum style --foreground 33 "➡️ Generated: $commit_msg"
+        ;;
+    "⚡ Quick commit types")
+        commit_type=$(gum choose --height 10 \
+            "feat: add new feature" \
+            "fix: bug fix" \
+            "docs: update documentation" \
+            "style: formatting changes" \
+            "refactor: code refactoring" \
+            "test: add or update tests" \
+            "chore: maintenance tasks" \
+            "perf: performance improvements" \
+            "ci: CI/CD changes" \
+            "build: build system changes")
+        
+        commit_detail=$(gum input --placeholder "Add details (optional)...")
+        if [ -n "$commit_detail" ]; then
+            commit_msg="$commit_type: $commit_detail"
+        else
+            commit_msg="$commit_type"
+        fi
+        ;;
+    "📋 Recent commit messages")
+        recent_commits=$(git log --oneline -10 --pretty=format:"%s" 2>/dev/null)
+        if [ -z "$recent_commits" ]; then
+            gum style --foreground 196 "No recent commits found"
+            commit_msg="Initial commit"
+        else
+            commit_msg=$(echo "$recent_commits" | gum choose --height 10)
+            if [ -z "$commit_msg" ]; then
+                gum style --foreground 196 "❌ No commit message selected"
+                exit 1
+            fi
+        fi
+        ;;
+esac
+
+# Show commit preview
+gum style \
+    --foreground 46 \
+    --border-foreground 46 \
+    --border rounded \
+    --padding "1 2" \
+    --margin "1 0" \
+    "📋 Commit Message Preview:" \
+    "$commit_msg"
+
+if ! gum confirm "Proceed with this commit?"; then
+    gum style --foreground 226 "👋 Commit cancelled"
+    exit 0
+fi
+
+# --- COMMIT ---
+gum spin --spinner dot --title "Creating commit..." -- git commit -m "$commit_msg"
+
+# --- BRANCH DETECTION & PUSH ---
+branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+if [ -z "$branch" ]; then
+    gum style --foreground 196 "❌ No active git branch found."
+    exit 1
+fi
+
+gum style --foreground 39 "🌿 Current branch: $branch"
+
+# Check if branch exists on remote
+if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+    push_msg="Pushing to existing remote branch: $branch"
+else
+    push_msg="Creating new remote branch: $branch"
+fi
+
+gum style --foreground 33 "📤 $push_msg"
+
+if gum confirm "Push to origin/$branch?"; then
+    # Show push progress
+    gum spin --spinner globe --title "Pushing changes..." -- git push -u origin "$branch"
+    
+    # --- SUCCESS ---
+    gum style \
+        --foreground 46 \
+        --background 22 \
+        --border-foreground 46 \
+        --border double \
+        --align center \
+        --width 50 \
+        --margin "1 2" \
+        --padding "1 2" \
+        "🎉 SUCCESS!" \
+        "Changes pushed to $branch"
+    
+    # Show final status
+    gum join --horizontal \
+        "$(gum style --foreground 46 '✅ Committed:')" \
+        "$(gum style --foreground 33 "$commit_msg")"
+    
+    gum join --horizontal \
+        "$(gum style --foreground 46 '📤 Pushed to:')" \
+        "$(gum style --foreground 33 "origin/$branch")"
+    
+    # Option to view repository
+    if gum confirm --default=false "Open repository URL? (if available)"; then
+        repo_url=$(git config --get remote.origin.url 2>/dev/null | sed 's/\.git$//' | sed 's/git@github\.com:/https:\/\/github\.com\//')
+        if [ -n "$repo_url" ]; then
+            gum style --foreground 33 "🌐 Repository: $repo_url"
+            # Try to open URL (works on macOS and some Linux distributions)
+            if command -v open &> /dev/null; then
+                open "$repo_url"
+            elif command -v xdg-open &> /dev/null; then
+                xdg-open "$repo_url"
+            else
+                gum style --foreground 226 "Please manually open: $repo_url"
+            fi
+        else
+            gum style --foreground 196 "❌ Could not determine repository URL"
+        fi
+    fi
+    
+else
+    gum style --foreground 226 "📝 Committed locally but not pushed"
+    gum style --foreground 33 "Run 'git push -u origin $branch' when ready"
+fi
+
+# Final message
+gum style \
+    --foreground 39 \
+    --italic \
+    --margin "1 0" \
+    "Thanks for using Git Auto Commit! 🚀"
