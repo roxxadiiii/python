@@ -1,0 +1,23 @@
+#!/bin/env python3
+
+print("8/3 = " , 8/3)                 # this will treated as a float
+
+print("8/3 after typecasting into int = " , int(8/3) )          # this will chop everything after decimal point
+
+
+# we can also round the numbers
+
+print("rounding 8/3 gives us : " , round(8/3))
+
+# we can also round it to specific decimal places
+
+print("rounding 8/3 for 2 decimal gives us : " , round(8 / 3 , 2))
+
+print("rounding 2.6666666666666666666/3 for 2 decimal gives us : " , round(2.666666666666666666666/3, 2))
+
+# instead we can use float division
+
+print("8//3 = " , 8//3)
+print("type of 8//3 = " , type(8//3))
+
+help

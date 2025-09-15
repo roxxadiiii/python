@@ -1,0 +1,25 @@
+#!/bin/env python3
+
+numChar = len(input("What is your name : "))
+# print("Your name has " + numChar + " Characters")   # thiss will give a type error
+# we cannot con int
+# but we can convert it into a string
+print("type of numChar variable :  " , type(numChar))
+
+
+strNumChar = str(numChar)
+
+print("Your name has " + strNumChar + " Characters") 
+
+
+# now checking strNumchar type
+
+print("type of strNumChar : " , type(strNumChar))
+
+
+# now some guess work
+
+print(80 + float(67.12))
+
+
+print(str(12) + str(123))           # this con and treating both as a string

@@ -1,0 +1,47 @@
+#!/bin/env python3
+
+
+# printing len of a string
+
+print(len("Hello"))
+
+
+# what happen when we try to print len of a num
+
+# print(len(123123123))                 this will give type error
+
+# data types
+
+# string :
+#       "hello" is a string
+#       "hello"[0]
+
+print("Printing the first character : "[0] )            # this is also know as subscripting .
+
+
+# any number written in "" it is treated as string
+
+print("12433" + "1232431")          # concattanating as a string
+# work same as
+print("hello "+ "world")
+
+
+# integer
+
+print(123 + 1234)
+
+# large number
+
+print(123_123_124 + 123)        # in the place of 123,123,124
+
+# float =  decimal
+
+# boolean
+
+print("printing true : " , True)
+print("printing false : " , False)
+
+
+
+
+
