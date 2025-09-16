@@ -238,25 +238,25 @@ for i in range(1,num):
 print(num)
 
 ```
-[ x ] 13.write a program that prints the squares of all the numbers less than or equal to a given number .
-[ x ] 14.write a python program that prints number from 1 to 10.
-[ x ] 15.write a python program to calculate the factorial of a number using a for loop .
-[ x ] 16.write a program to find if a given number os prime or not.
-[  ] 17.write a python program to print the fibonacci sequence up to n terms , where n is input by the user.
-[  ] 18.write a python program to generate the fibonacci series with a given number of elements .
-[  ] 19.write a python program to check whether a given (input from user) string or number is a palindrome .
-[  ] 20.write a python function that counts the numbers of vowels in a given string .
-[  ] 21.write a python program to reverse a given string without using slicing .
-[ x ] 22.Write a python program to remove all duplicates from a given list .
-[  ] 23.Write a python function find_max_min that returns maximum and minimum values in a list .
-[  ] 24.Write a python program to count the frequency of each word in a given text .
-[  ] 25.Write a python function that takes a dictionary as input and returns the key with the highest value .
-[  ] 26.Write a Python function that accepts an arbitrary number of keyword arguments and prints the result as a dictionary .
-[ x ] 27.Write a Python function is prime that checks if a number is a prime number .
-[  ] 28.Write a python function that accepts an arbitrary number of keyboard arguments and prints the result as a dictionary .
-[  ] 29.Write a python program that takes a list of integers and returns a new list that contains only the even numbers using list comprehensions .
-[  ] 30.Write a pyhton list comprehension to generate a list of squares of numbers between 1 and 10 .
-[  ] 31.Write a python program to read text file and print the number of lines .
-[  ] 32.Write a python program to write the contents of one file into another file .
-[  ] 33.write a program that finds a string in a given file .
-[  ] 34.Write a program that finds a given string in a file and returns the place where the string appears in the file . your program should return the index of the first character of the given string in the file .
+13.write a program that prints the squares of all the numbers less than or equal to a given number .
+14.write a python program that prints number from 1 to 10.
+15.write a python program to calculate the factorial of a number using a for loop .
+16.write a program to find if a given number os prime or not.
+17.write a python program to print the fibonacci sequence up to n terms , where n is input by the user.
+18.write a python program to generate the fibonacci series with a given number of elements .
+19.write a python program to check whether a given (input from user) string or number is a palindrome .
+20.write a python function that counts the numbers of vowels in a given string .
+21.write a python program to reverse a given string without using slicing .
+22.Write a python program to remove all duplicates from a given list .
+23.Write a python function find_max_min that returns maximum and minimum values in a list .
+24.Write a python program to count the frequency of each word in a given text .
+25.Write a python function that takes a dictionary as input and returns the key with the highest value .
+26.Write a Python function that accepts an arbitrary number of keyword arguments and prints the result as a dictionary .
+27.Write a Python function is prime that checks if a number is a prime number
+28.Write a python function that accepts an arbitrary number of keyboard arguments and prints the result as a dictionary .
+29.Write a python program that takes a list of integers and returns a new list that contains only the even numbers using list comprehensions .
+30.Write a pyhton list comprehension to generate a list of squares of numbers between 1 and 10 .
+31.Write a python program to read text file and print the number of lines .
+32.Write a python program to write the contents of one file into another file .
+33.write a program that finds a string in a given file .
+34.Write a program that finds a given string in a file and returns the place where the string appears in the file . your program should return the index of the first character of the given string in the file .
