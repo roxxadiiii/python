@@ -238,13 +238,203 @@ for i in range(1,num):
 print(num)
 
 ```
-13.write a program that prints the squares of all the numbers less than or equal to a given number .
-14.write a python program that prints number from 1 to 10.
-15.write a python program to calculate the factorial of a number using a for loop .
-16.write a program to find if a given number os prime or not.
-17.write a python program to print the fibonacci sequence up to n terms , where n is input by the user.
-18.write a python program to generate the fibonacci series with a given number of elements .
-19.write a python program to check whether a given (input from user) string or number is a palindrome .
+[  ]13.write a program that prints the squares of all the numbers less than or equal to a given number .
+```
+
+```
+[ x ]14.write a python program that prints number from 1 to 10.
+```
+#!/usr/bin/env python3
+art = (
+'''
+┌─┐┬┌┐ ┌─┐┌┐┌┌─┐┌─┐┌─┐┬  
+├┤ │├┴┐│ ││││├─┤│  │  │  
+└  ┴└─┘└─┘┘└┘┴ ┴└─┘└─┘┴  
+┌─┐┌─┐┌─┐ ┬ ┬┌─┐┌┐┌┌─┐┌─┐
+└─┐├┤ │─┼┐│ │├┤ ││││  ├┤ 
+└─┘└─┘└─┘└└─┘└─┘┘└┘└─┘└─┘
+'''
+)
+
+print(art)
+
+num = int(input("enter the desired number for fibonacci"))
+
+for i in range(num):
+
+
+```
+[ x ]15.write a python program to calculate the factorial of a number using a for loop .
+```
+#!/usr/bin/env python3
+art = (
+'''
+┬┌─┐┌─┐┌─┐┬  ┬┌┐┌┌┬┐┬─┐┌─┐┌┬┐┌─┐ ┌─┐┬ ┬
+│└─┐├─┘├─┤│  ││││ ││├┬┘│ ││││├┤  ├─┘└┬┘
+┴└─┘┴  ┴ ┴┴─┘┴┘└┘─┴┘┴└─└─┘┴ ┴└─┘o┴   ┴
+'''
+)
+
+print(art)
+
+# code start
+
+nu = input("Enter the desired string to check whether it is palindrome or not : ")
+
+lenS = len(nu) - 1
+
+for i in range(lenS):
+    if nu[i] == nu[lenS - i]:
+        print("chechking")
+    else :
+        print("not palindrome")
+        exit()
+print("is palindrome")
+print(len(nu))
+
+```
+
+[ x ]16.write a program to find if a given number os prime or not.
+```
+#!/usr/bin/env python3
+
+art = (
+'''
+┬  ┬┌─┐┬ ┬┌─┐┬  ┌─┐   ┌─┐┌─┐┬ ┬┌┐┌┌┬┐┌─┐┬ ┬
+└┐┌┘│ ││││├┤ │  └─┐───│  │ ││ ││││ │ ├─┘└┬┘
+ └┘ └─┘└┴┘└─┘┴─┘└─┘   └─┘└─┘└─┘┘└┘ ┴o┴   ┴ 
+
+'''
+
+)
+
+print(art)
+
+# real code begins
+
+s = input("Enter the desired string : ")
+vowels = "aeiouAEIOU"
+lenS = len(s) - 1
+count = 0
+for char in s:
+    if char in vowels:
+        count = count + 1
+print("the numbers of vowels : " , count)
+
+```
+
+[ x ]17.write a python program to print the fibonacci sequence up to n terms , where n is input by the user.
+```
+#!/usr/bin/env python3
+
+art = (
+'''
+
+┬─┐┌─┐┬  ┬┌─┐┬─┐┌─┐┌─┐
+├┬┘├┤ └┐┌┘├┤ ├┬┘└─┐├┤ 
+┴└─└─┘ └┘ └─┘┴└─└─┘└─┘
+┬ ┬┬┌┬┐┬ ┬┌─┐┬ ┬┌┬┐   
+││││ │ ├─┤│ ││ │ │    
+└┴┘┴ ┴ ┴ ┴└─┘└─┘ ┴    
+┌─┐┬  ┬┌─┐┬┌┐┌┌─┐     
+└─┐│  ││  │││││ ┬     
+└─┘┴─┘┴└─┘┴┘└┘└─┘     
+ ┌─┐┬ ┬               
+ ├─┘└┬┘               
+o┴   ┴                
+'''
+
+)
+
+
+print(art)
+s = input("Enter your desired string : ")
+
+rs = " "
+
+for i in s:
+    rs = i + rs
+
+# hence reversed string
+
+print("reversed string is : " , rs)
+
+```
+
+[ x ]18.write a python program to generate the fibonacci series with a given number of elements .
+```
+#!/usr/bin/env python3
+
+art = (
+'''
+┬─┐┌─┐┌┬┐┌─┐┬  ┬┌─┐      
+├┬┘├┤ ││││ │└┐┌┘├┤       
+┴└─└─┘┴ ┴└─┘ └┘ └─┘      
+┌┬┐┬ ┬┌─┐┬  ┬┌─┐┌─┐┌┬┐┌─┐
+ │││ │├─┘│  ││  ├─┤ │ ├┤ 
+─┴┘└─┘┴  ┴─┘┴└─┘┴ ┴ ┴ └─┘
+┬  ┬┌─┐┌┬┐               
+│  │└─┐ │                
+┴─┘┴└─┘ ┴                
+'''
+
+)
+
+
+
+myli = input("Enter your desired list and seperate them with space : ").split()
+# split() use to split the data as a list or dict
+
+# print(myli)               for testing purposes
+
+woRep = []
+
+for i in myli:
+    if i not in woRep:
+        woRep.append(i)
+
+print("list without removing duplicates : " , myli)
+print("list with removing duplicates : " , woRep)
+
+```
+
+[ x ]19.write a python program to check whether a given (input from user) string or number is a palindrome .
+```
+#!/usr/bin/env python3
+
+art = (
+'''
+┌─┐┬┌┐┌┌┬┐
+├┤ ││││ ││
+└  ┴┘└┘─┴┘
+┌┬┐┬┌┐┌   
+│││││││   
+┴ ┴┴┘└┘   
+┌┬┐┌─┐─┐ ┬
+│││├─┤┌┴┬┘
+┴ ┴┴ ┴┴ └─
+'''
+)
+
+print(art)
+
+def find_min_max(my_list):
+    # print(my_list)                use for debugg process
+    max_val = my_list[0]
+    min_val = my_list[0]
+    for num in my_list:
+        if num > max_val:
+            max_val = num
+        elif num < min_val:
+            min_val = num
+    
+    return (max_val , min_val)
+
+myli = input("Enter your desired list and seperate it with space : ").split()
+
+print("Max , Min : " ,find_min_max(myli))
+
+```
 20.write a python function that counts the numbers of vowels in a given string .
 21.write a python program to reverse a given string without using slicing .
 22.Write a python program to remove all duplicates from a given list .
