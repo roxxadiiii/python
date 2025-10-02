@@ -107,6 +107,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 	\item Python was created by Guido van Rossum in the early 90s. It is now one of the most popular languages in existence. I fell in love with Python for its syntactic clarity. It's basically executable pseudocode.
 	\item Single line comments start with \# (numbered symbol)
 	
+	\subsection{Comments}
 	\begin{lstlisting}
 		# this is your single line comment.
 	\end{lstlisting}
@@ -135,8 +136,292 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 		# printing art
 		print(art)
 	\end{lstlisting}
-	\subsection{Primitive Datatypes and Operators}
-	\item 
+	\subsection{helloWorld}
+	\item We can print any string with print("String")
+	\item Here print() is a function.
+	\item Anything between "" is String.
+	\begin{lstlisting}
+		print("hello world")
+	\end{lstlisting}
+	\item This will give output \textit{hello World} on the console
+	
+	\subsection{Escape Sequence}
+	\item In python the escape sequence represent new line character
+	\item We can print multiple line in shell using only one line of code.
+	\item we use \textit{\textbackslash n} where we want to break the line
+	\begin{lstlisting}
+		print("This is first line.\nThis is second line.\nThis is third line.\n and goes on.........")
+	\end{lstlisting}
+	\item Previous command will give us the following output
+	\begin{lstlisting}
+		This is first line.
+		This is second line.
+		This is third line.
+		 and goes on.........
+	\end{lstlisting}
+	\subsection{Concatenate}
+	\item Concatenate means joining two or more things together in sequence.
+	
+	\item It usually refers to joining strings, arrays, or lists end-to-end.
+	
+	\item The result of concatenation is a single combined object of the same type (string + string = string, list + list = list).
+	
+	\item Concatenation is order-sensitive: "A" + "B" is different from "B" + "A".
+	
+	\item Only compatible types can be concatenated (string + string works, string + number does not unless converted).
+	
+	\item Concatenation does not alter the original objects unless you explicitly reassign the result.
+	\begin{lstlisting}
+		# String + String -> String
+		a = "Hello"
+		b = "World"
+		result = a + b
+		print(result)
+		print(type(result))
+		
+		# Output
+		HelloWorld
+		<class 'str'>
+		
+		
+		
+		# List + List -> List
+		list1 = [1, 2, 3]
+		list2 = [4, 5, 6]
+		result = list1 + list2
+		print(result)
+		print(type(result))
+		
+		
+		# Output
+		[1, 2, 3, 4, 5, 6]
+		<class 'list'>
+		
+	\end{lstlisting}
+	
+	\subsection{type()}
+	\item \textit{type()} is a built-in Python function used to find the type (class) of an object.
+	
+	\item It tells what kind of data (string, list, int, float, etc.) the object belongs to. [we will know about these in next section]
+	
+	\item Useful for debugging, validation, and understanding how Python treats different values.
+	
+	\item The return value of type() itself is a type object (like <class 'str'>, <class 'list'>).
+	
+	\item Objects of the same type can usually be combined, manipulated, or iterated in similar ways.
+	
+	\item For String ;
+	\begin{lstlisting}
+		# for String
+		
+		text = "Python"
+		print("text = " , text , type(text))
+		
+		
+		# output should be like
+		text =  Python <class 'str'>
+	\end{lstlisting}
+	\item For Int ;
+	\begin{lstlisting}
+		# for int
+		num = 42
+		print("num = " , num , type(num))
+		
+		
+		# output
+		num =  42 <class 'int'>
+		
+	\end{lstlisting}
+	\item For list ;
+	\begin{lstlisting}
+		# for list
+		numbers = [1, 2, 3]
+		print("list = " , numbers , type(numbers))
+		
+		
+		# output
+		list =  [1, 2, 3] <class 'list'>
+	\end{lstlisting}
+	
+	\subsection{input()}
+	\item input() is a built-in Python function used to take user input from the keyboard.
+	
+	\item It always returns the entered data as a string, no matter what the user types.
+	
+	\item If you need another type (like int or float), you must convert the result using functions like int() or float().
+	
+	\item It pauses program execution until the user presses Enter.
+	
+	\item Useful for interactive programs where user input is required.
+	
+	\item String ;
+	\begin{lstlisting}
+		# string 
+		name = input("Enter your name: ")
+		print("Hello,", name)
+		print(type(name))
+		
+		# output
+		Enter your name: roxx
+		Hello, roxx
+		<class 'str'>
+		
+	\end{lstlisting}
+	
+	\item Converting Inputing to Integers ;
+	\begin{lstlisting}
+		age = int(input("Enter your age: "))
+		print("You are", age, "years old")
+		print(type(age))
+		
+		
+		# output
+		Enter your age: 25
+		You are 25 years old
+		<class 'int'>
+		
+	\end{lstlisting}
+	
+	\item Converting input to float ;
+	\begin{lstlisting}
+		pi_val = float(input("Enter value of pi: "))
+		print("Pi is approx:", pi_val)
+		print(type(pi_val))
+		
+		
+		# output 
+		Enter value of pi: 3.147
+		Pi is approx: 3.147
+		<class 'float'>
+		
+	\end{lstlisting}
+	
+	\subsection{Typecasting}
+	\item \textit{Typecasting} means converting one data type into another in Python.
+	
+	\item It is done using constructor functions like int(), float(), str(), list(), tuple(), etc.
+	
+	\item Typecasting is required when you want to perform operations that need specific types (e.g., arithmetic on numbers instead of strings).
+	
+	\item Some conversions are safe and natural (e.g., int("10") → 10), while others may raise errors (e.g., int("abc") → error).
+	
+	\item Typecasting always creates a new object of the target type; the original object remains unchanged.
+	
+	\item String -> Integers
+	\begin{lstlisting}
+		# String -> Integers
+		s = "123"
+		num = int(s)
+		print(num, type(num))
+		
+		
+		# output
+		123 <class 'int'>
+	\end{lstlisting}
+	
+	\item String -> float
+	\begin{lstlisting}
+		# String -> float
+		s = "3.14"
+		pi = float(s)
+		print(pi, type(pi))
+		
+		# output
+		3.14 <class 'float'>
+	\end{lstlisting}
+	
+	\item Integer -> string
+	\begin{lstlisting}
+		#Integer -> String
+		n = 42
+		s = str(n)
+		print(s, type(s))
+		
+		
+		# output
+		# 42 <class 'str'>
+	\end{lstlisting}
+	
+	\item list -> tuple
+	\begin{lstlisting}
+		# List -> tuple
+		
+		lst = [1, 2, 3]
+		t = tuple(lst)
+		print(t, type(t))
+		
+		# output
+		# (1, 2, 3) <class 'tuple'>
+	\end{lstlisting}
+	
+	\item tuple -> list
+	\begin{lstlisting}
+		# tuple -> list
+		
+		t = (4, 5, 6)
+		lst = list(t)
+		print(lst, type(lst))
+		
+		
+		# output
+		# [4, 5, 6] <class 'list'>
+	\end{lstlisting}
+	
+	\subsection{len() function}
+	\item len() is a built-in Python function that returns the number of items in an object.
+	
+	\item It works on sequences (strings, lists, tuples) and collections (sets, dictionaries).
+	
+	\item For strings, len() counts the number of characters.
+	
+	\item For lists, tuples, and sets, len() counts the number of elements.
+	
+	\item For dictionaries, len() counts the number of key-value pairs.
+	
+	\item It does not work on integers or floats directly (unsupported types).
+	
+	\item String ;
+	\begin{lstlisting}
+		a = " : "
+		# String
+		text = "Python"
+		print(text , len(text))
+		
+		# output
+		# Python 6
+	\end{lstlisting}
+	
+	\item list ;
+	\begin{lstlisting}
+		# list
+		nums = [10, 20, 30, 40]
+		print(nums ,a, len(nums))
+		
+		# output
+		# [10, 20, 30, 40]  :  4
+	\end{lstlisting}
+	\item tuple ;
+	\begin{lstlisting}
+		# tuple ;
+		t = (1, 2, 3, 4, 5)
+		print(t,a,len(t))
+		
+		
+		# output
+		# (1, 2, 3, 4, 5)  :  5
+		
+	\end{lstlisting}
+	\item set ;
+	\begin{lstlisting}
+		# set ;
+		s = {1, 2, 3, 4}
+		print(s , a, len(s))
+		
+		# output
+		# {1, 2, 3, 4}  :  4
+		
+	\end{lstlisting}
+	
 \end{itemize}
 
 

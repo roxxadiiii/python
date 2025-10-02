@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.1)  1 OCT 2025 23:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.1)  2 OCT 2025 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -678,22 +678,22 @@ LaTeX Font Info:    Trying to load font information for TS1+qhv on input line 1
 File: ts1qhv.fd 2009/09/25 v1.2 font definition file for TS1/qhv
 )
 LaTeX Font Info:    Trying to load font information for T1+droidsansmono on inp
-ut line 110.
+ut line 111.
 
 (/usr/share/texmf-dist/tex/latex/droid/T1droidsansmono.fd
 File: T1droidsansmono.fd 2019/06/24 Font definitions for T1/droidsansmono.
 )
 LaTeX Font Info:    Font shape `T1/droidsansmono/m/n' will be
-(Font)              scaled to size 10.95pt on input line 110.
+(Font)              scaled to size 10.95pt on input line 111.
 LaTeX Font Info:    Font shape `T1/droidsansmono/m/n' will be
-(Font)              scaled to size 10.0pt on input line 110.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 111
+(Font)              scaled to size 10.0pt on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 112
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 111
+LaTeX Font Info:    Trying to load font information for U+msb on input line 112
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -705,27 +705,44 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/tex-gyre/q-ec-sc.enc}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre
 /q-ec.enc}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share
-/texmf-dist/fonts/enc/dvips/droid/a_xgvdme.enc}] (./python.aux)
+/texmf-dist/fonts/enc/dvips/droid/a_xgvdme.enc}]
+
+[2]
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+[8] (./python.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17004 strings out of 475171
- 318988 string characters out of 5767095
- 998310 words of memory out of 5000000
- 39698 multiletter control sequences out of 15000+600000
- 587224 words of font info for 58 fonts, out of 8000000 for 9000
+ 17045 strings out of 475171
+ 319370 string characters out of 5767095
+ 999310 words of memory out of 5000000
+ 39738 multiletter control sequences out of 15000+600000
+ 590450 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,11n,87p,387b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,87p,387b,1921s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/ascender/droid/droidsansmono/DroidSansMono
-.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/te
-xmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb>
-Output written on python.pdf (1 page, 62230 bytes).
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/
+fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/
+tex-gyre/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
+
+Output written on python.pdf (8 pages, 113038 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
