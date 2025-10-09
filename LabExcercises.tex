@@ -1,0 +1,174 @@
+%%% Template originaly created by Karol Kozioł (mail@karol-koziol.net) and modified for ShareLaTeX use
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage[defaultmono]{droidsansmono}
+
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{tikz}
+
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{center}
+\vspace{2ex}
+{\huge \textsc{\@title}}
+\vspace{1ex}
+\\
+\linia\\
+\@author \hfill \@date
+\vspace{4ex}
+\end{center}
+}
+\makeatother
+%%%
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{Python Questions}
+\cfoot{}
+\rfoot{Page \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+\title{Python Lab Excercises}
+
+\maketitle
+\begin{enumerate}
+\section{Basic Syntax:}
+%\begin{enumerate}
+	\item Write a programs that takes two numbers and prints them on the screen .
+	\item Write a program that prompts the user for their name and prints a welcome message to them .
+	\item Write a program that prints the squares of all the numbers less than or equal to a given number .
+	\item Write a program for swapping the values of two variables without using a third variable .
+	\item Write a program for swapping the values of two variables without using a third variable .
+	\item Write a program that finds GCD of two given numbers .
+	\item Write a python function SumOfList that takes a list of integers and return their sum .
+%\end{enumerate}
+\section{Control Structures:}
+%\begin{enumerate}
+	\item Write a python program that checks whether a given number is even or odd .
+	\item Write a python prorgam that find the largest among three numbers provoded by the user .
+	\item Write a prorgam that finds the largest number from the given numbers .
+%\end{enumerate}
+\section{Loops:}
+%\begin{enumerate}
+	\item Write a Python program that prints all the numbers between a given range.
+	\item Write a python program that prints all the even number between a given range.
+	\item Write a python program that prints all the odd numbers between a given range.
+	\item Write a python program that prints a table of a given number.
+	\item Write a python program to calculate the factorial of a number using a for loop.
+	\item write a python program to find if a given number is prime or not.
+	\item write a python program to find the mean, median,mode,variance and standard deviation of a given set of numbers.
+	\item write a python program to print the fibonacci sequesnce up to n terms, where n  is the input by the user.
+	\item write a python program to display the sum of all the given number without using any string functions.
+	\item write a program that generates and returns all the prime factors of a given number.
+	\item write a program that displays the weights of all the digits in a given number without using any library functions
+\section{Strings:}
+	\item Write a python program that counts the number of vowels and consonants in a given string.
+	\item write a python functions that counts the numbers of words in a string.
+	\item write a python functions that counts the numbers of lines in a given string.
+	\item write a python functions that prints the numbers of digits and punctuations marks that appear in a string.
+	\item write a python program to reverse a given string without using slicing.
+	
+\section{Lists:}
+	\item Write a python program that prints all the numbers in a list stored on a given range of indexes.
+	\item write a python program to remove all duplicates from a given list.
+	\item write a python functions FindMaxMin that returns the maximum values in a list.
+\section{Dictonaries:}
+	\item write a python programs to count the frequency of each word in a given text.
+	\item write a python function that takes a dictonary as input and returns the key with the highest value.
+\section{Functions and Arguments:}
+	\item Write a python function isPrime that checks if a number is prime number.
+	\item write a python function that accepts an arbitrary number of keyword arguments and prints the result as a dictonary.
+	\item write a function that takes a list of numbers and returns the square of all those numbers.
+	\item write a function that takes the radius of a circle and returns the diameter,area,and circumference of it.
+	\item write a function that takes a number as input and tells if it is divisible by 3 or not,without dividing it.
+	\item write a function that takes a number as input and tells if it is divisible by 11 or not,without dividing it.
+\section{List Comprehensions:}
+	\item write a python program that takes a list of integers and return a new list that contains only the even numbers using list comprehensions.
+	\item write a python list comprehension to generate a list of squares of number between 1 and 10.
+
+\section{File Handeling:}
+	\item Write a python program to read a text file and print the numbers of lines,words,and characters in it.
+	\item write a python program to write the contents of one file into another file.
+	\item write a program that finds a given string in a given file.
+	\item write a program that finds a given string in a file and returns the place where the string appears in the file.your prorgram should return the index of the first character of the given string in the file.
+	\item write a python program that finds a given word in a file and replaces all the instances of the given word with another given word(similiar to find and replace all functionality).
+	
+\section{Exception Handling:}
+	\item Write a python program that handles the ZeroDivisionError exception.
+	\item write a python function that raises a ValueError if a non-numeric values is passed as an argument
+	
+\section{Classes and Objects:}
+	\item Write a Python class Rectangle that has attributes for length and has attributes for length and width and methods to calculate the area and perimeter.
+	\item Write a python class BankAccount with methods to deposit,withdraw,and check the balance of the account.
+	\item Write a Python class with a method that behaves differently based on the number of arguments passed (simulate method overloading).
+	
+	\item Implement a class with an add method that can add two or three numbers using method overloading techniques .
+	
+	\item Create a method that performs different operations based on argument types (e.g. Multiply if both are ints , repeat if first is string and second is int).
+\end{enumerate}
+\end{document}
